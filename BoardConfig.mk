@@ -70,8 +70,11 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
-#commented out in msm7x30-common for some reason
+# GPS LOC Definition
 BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 1240
 
-# We don't have HDMI out
+# Disable HDMI out
 TARGET_QCOM_HDMI_OUT := false
+
+# Definition required for Legacy USB storage
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
