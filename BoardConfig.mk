@@ -78,3 +78,6 @@ TARGET_QCOM_HDMI_OUT := false
 
 # Definition required for Legacy USB storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
+
+# Use Legacy Trackpad
+BOARD_USE_LEGACY_TRACKPAD := true
