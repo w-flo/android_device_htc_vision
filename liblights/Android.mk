@@ -14,11 +14,11 @@
 
 LOCAL_PATH:= $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),ace)
+ifneq ($(TARGET_SIMULATOR),true)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := lights.spade
+LOCAL_MODULE := lights.vision
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
@@ -32,4 +32,4 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
-endif # TARGET_DEVICE
+endif # !TARGET_SIMULATOR

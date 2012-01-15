@@ -15,13 +15,13 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),ace)
+ifneq ($(TARGET_SIMULATOR),true)
 
 # HAL module implemenation, not prelinked, and stored in
 # hw/<SENSORS_HARDWARE_MODULE_ID>.<ro.product.board>.so
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := sensors.spade
+LOCAL_MODULE := sensors.vision
 
 LOCAL_MODULE_PATH := $(TARGET_OUT_SHARED_LIBRARIES)/hw
 
@@ -42,4 +42,4 @@ LOCAL_PRELINK_MODULE := false
 
 include $(BUILD_SHARED_LIBRARY)
 
-endif # TARGET_DEVICE
+endif # !TARGET_SIMULATOR
