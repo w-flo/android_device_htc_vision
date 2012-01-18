@@ -183,6 +183,9 @@ PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/nam/gps.conf
 PRODUCT_COPY_FILES += \
     device/htc/vision/vold.fstab:system/etc/vold.fstab
 
+PRODUCT_COPY_FILES += \
+    vendor/htc/vision/proprietary/libcamera.so:obj/lib/libcamera.so
+
 # Kernel modules
 #PRODUCT_COPY_FILES += \
 

@@ -39,7 +39,7 @@ BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
 
 # Workaround for vision broken overlay scaling
-#BOARD_OVERLAY_MINIFICATION_LIMIT := 2
+BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := vision 
 
@@ -78,3 +78,7 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/f
 
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
+
+#legacy camera hacks
+TARGET_LEGACY_CAMERA := true
+

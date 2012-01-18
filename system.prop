@@ -5,8 +5,13 @@ ro.sf.lcd_density=240
 
 debug.fb.rgb565=0
 
+# Disable system restrictions for all builds
+persist.sys.strictmode.visual=0 
+ro.secure=0
+
 debug.sf.hw=1
-debug.composition.type=c2d
+debug.composition.type=dyn
+debug.compbypass.enable=1
 #debug.enabletr=true
 debug.qctwa.statusbar=1
 debug.qctwa.preservebuf=1
@@ -67,4 +72,8 @@ net.tcp.buffersize.hsdpa=4094,87380,393216,4096,16384,110208
 #For USB mount
 persist.sys.usb.config=mass_storage,adb
 persist.service.adb.enable=1
+
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapgrowthlimit=64m
+dalvik.vm.heapsize=256m
 

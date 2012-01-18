@@ -27,3 +27,24 @@
 /dev/genlock            0666    root        root
 
 /dev/ttyHS0             0660    bluetooth   bluetooth
+
+#not sure which of these we really need anymore
+/dev/control0             0660   system     audio
+/dev/msm_mp3              0660   system     audio
+/dev/msm_mp3_lp           0660   system     audio
+/dev/msm_pcm_in           0660   system     audio
+/dev/msm_pcm_out          0660   system     audio
+/dev/htc-acdb             0660   system     audio
+/dev/htc-acoustic         0660   system     audio
+/dev/controlC0            0660   system     audio
+/dev/adsp                 0660   system     audio
+/dev/tpa2051d3            0660   system     audio
+/dev/graphics/*           0660   root       graphics
+/dev/msm_hw3dc            0666   root       root
+/dev/pmem                 0660   system     graphics
+/dev/ttyMSM0              0600   bluetooth  bluetooth
+/dev/uinput               0660   system     bluetooth
+/sys/devices/virtual/usb_composite/*   enable      0664  root   system
+/dev/bus/usb/*            0660   root       usb
+/dev/mtp_usb              0660   root       mtp
+/dev/msm_camera/*         0660   system     camera
