@@ -41,15 +41,15 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-         <item>160</item>
-         <item>225</item>
-         <item>320</item>
-         <item>640</item>
-         <item>1280</item>
-         <item>2600</item>
-         <item>5800</item>
-         <item>8000</item>
-         <item>10240</item>
+         <item>11</item>
+         <item>41</item>
+         <item>91</item>
+         <item>161</item>
+         <item>226</item>
+         <item>321</item>
+         <item>641</item>
+         <item>1281</item>
+         <item>2601</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -57,11 +57,11 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>41</item>
-        <item>61</item>
-        <item>81</item>
+        <item>89</item>
+        <item>95</item>
         <item>112</item>
-        <item>143</item>
+        <item>163</item>
+        <item>163</item>
         <item>163</item>
         <item>186</item>
         <item>208</item>
@@ -74,9 +74,9 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-        <item>255</item>
-        <item>255</item>
-        <item>255</item>
+        <item>30</item>
+        <item>30</item>
+        <item>30</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -95,7 +95,7 @@
         <item>255</item>
         <item>255</item>
         <item>255</item>
-        <item>0</item>
+        <item>255</item>
         <item>0</item>
         <item>0</item>
         <item>0</item>
@@ -155,7 +155,7 @@
          Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
          should be empty.  An example would be "softap.*" -->
     <string-array translatable="false" name="config_tether_wifi_regexs">
-        <item>"wlan0"</item>
+        <item>"wl0.1"</item>
     </string-array>
 
     <!-- List of regexpressions describing the interface (if any) that represent tetherable
@@ -183,9 +183,16 @@
 
     <bool name="config_ui_enableFadingMarquee">false</bool>
 
+    <!-- List of regexpressions describing the interface (if any) that represent tetherable
+         Wifi interfaces.  If the device doesn't want to support tethering over Wifi this
+         should be empty.  An example would be "softap.*" -->
+    <string-array translatable="false" name="config_tether_wifi_regexs">
+        <item>"wl0.1"</item>
+    </string-array>
+
     <!-- Vibrator pattern for feedback about touching a virtual key -->
     <integer-array name="config_virtualKeyVibePattern">
-        <item>10</item>
+        <item>30</item>
     </integer-array>
 
 </resources>

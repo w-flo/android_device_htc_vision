@@ -31,7 +31,7 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/htc/vision/BoardConfigVendor.mk
 
-TARGET_BOOTLOADER_BOARD_NAME := vision 
+TARGET_BOOTLOADER_BOARD_NAME := vision
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
 BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
@@ -41,7 +41,7 @@ BOARD_KERNEL_PAGE_SIZE := 4096
 # Workaround for vision broken overlay scaling
 BOARD_OVERLAY_MINIFICATION_LIMIT := 2
 
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := vision 
+BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := vision
 
 # cat /proc/emmc
 #dev:        size     erasesize name
@@ -70,15 +70,12 @@ BOARD_SDEXT_DEVICE := /dev/block/mmcblk1p2
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_NO_MISC_PARTITION := true
 
-# Disable HDMI out
-TARGET_QCOM_HDMI_OUT := false
-
 # Definition required for Legacy USB storage
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/file
 
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
 
-#legacy camera hacks
+# Use Legacy Camera
 TARGET_LEGACY_CAMERA := true
 
