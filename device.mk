@@ -42,6 +42,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vold.umsdirtyratio=20
 
+# Andromadus Version will find somewhere better for this....
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.modversion=Alpha10
+
 DEVICE_PACKAGE_OVERLAYS += device/htc/vision/overlay
 
 PRODUCT_COPY_FILES += \
