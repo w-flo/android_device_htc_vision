@@ -16,9 +16,6 @@ debug.compbypass.enable=1
 debug.qctwa.statusbar=1
 debug.qctwa.preservebuf=1
 
-# disable sound lock and revert back to standard lockscreen.
-ro.config.soundlock=false
-
 # cm qcom build lub
 com.qc.hardware=true
 com.qc.hdmi_out=false
