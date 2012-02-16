@@ -202,7 +202,7 @@ key 179   NUMPAD_LEFT_PAREN
 key 180   NUMPAD_RIGHT_PAREN
 # key 181 "KEY_NEW"
 # key 182 "KEY_REDO"
-# key 183   F13
+key 183   PROG_RED   
 # key 184   F14
 # key 185   F15
 # key 186   F16

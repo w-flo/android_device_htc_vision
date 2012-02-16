@@ -1,5 +1,6 @@
 type ALPHA
 # keycode      Display   Number    Base      Shift     Alt       Shift+Alt
+
 key 0              {
 	label:'0'       
 	base:'0'       
@@ -370,6 +371,11 @@ key SLASH          {
 	shift, capslock:'?'       
 	alt: '?'       
 	shift+alt:'\\'      
+}
+key PROG_RED  {  
+	base: '\uEF01'
+	alt: '\uEF01'  
+	shift+alt:'\uEF01'  
 }
 key AT             {
 	label:'@'       
