@@ -36,7 +36,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.gmsversion=2.3_r3 \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
-    dalvik.vm.dexopt-flags=m=y
+    dalvik.vm.dexopt-flags=m=y \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=64m \
+    dalvik.vm.heapsize=256m
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -44,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Andromadus Version will find somewhere better for this....
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=Alpha11
+    ro.modversion=Alpha12
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/vision/overlay
 

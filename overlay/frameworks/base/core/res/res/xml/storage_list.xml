@@ -5,5 +5,5 @@
         android:primary="true"
         android:allowMassStorage="true"
         android:removable="true"
-		android:maxFileSize="4096" />
+	android:maxFileSize="4096" />
 </StorageList>
