@@ -371,6 +371,13 @@ key SLASH          {
 	alt: '?'       
 	shift+alt:'\\'      
 }
+
+key PROG_RED  {
+       base: '\uEF01'
+       alt: '\uEF01'
+       shift+alt:'\uEF01'
+}
+
 key AT             {
 	label:'@'       
 	base:'@'       
