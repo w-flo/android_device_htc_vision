@@ -47,7 +47,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Andromadus Version will find somewhere better for this....
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.modversion=Alpha12
+    ro.modversion=Alpha13
 
 DEVICE_PACKAGE_OVERLAYS += device/htc/vision/overlay
 
