@@ -42,7 +42,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-flags=m=y \
     dalvik.vm.heapstartsize=8m \
     dalvik.vm.heapgrowthlimit=64m \
-    dalvik.vm.heapsize=256m
+    dalvik.vm.heapsize=256m \
+    ro.camera.preview=true
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
