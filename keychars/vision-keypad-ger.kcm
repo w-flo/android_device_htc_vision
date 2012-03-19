@@ -267,11 +267,11 @@ key Z              {
 	shift+alt:'6'       
 }    
 key BUTTON_R2 {
-  label:'?'
-  base:'?'
-  shift, capslock:'?'
-  alt: ')'
-  shift+alt: ')'
+	label:'?'
+	base:'?'
+	shift, capslock:'?'
+	alt: '='
+	shift+alt: '='
 }
 key COMMA          {
 	label:','       
