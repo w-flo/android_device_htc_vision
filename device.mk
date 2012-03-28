@@ -108,7 +108,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vision/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
     device/htc/vision/firmware/default.acdb:system/etc/firmware/default.acdb \
-    device/htc/vision/firmware/default_org.acdb:system/etc/firmware/default_org.acdbi \
+    device/htc/vision/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/vision/firmware/default_org_WA.acdb:system/etc/firmware/default_org_WA.acdb \
     device/htc/vision/firmware/vidc_720p_mp2_dec_mc.fw:system/etc/firmware/vidc_720p_mp2_dec_mc.fw \
     device/htc/vision/firmware/Vision_SPK.acdb:system/etc/firmware/Vision_SPK.acdb 
