@@ -40,9 +40,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
     dalvik.vm.lockprof.threshold=500 \
     dalvik.vm.dexopt-flags=m=y \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=64m \
-    dalvik.vm.heapsize=256m \
     ro.camera.preview=true
 
 # Override /proc/sys/vm/dirty_ratio on UMS
