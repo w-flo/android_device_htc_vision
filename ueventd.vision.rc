@@ -8,6 +8,7 @@
 
 /dev/akm8975_daemon     0640    compass     system
 /dev/akm8975_aot        0640    compass     system
+/dev/oncrpc/*           0660    root        system
 
 /dev/htc-acdb           0660    system      audio
 /dev/msm_audio_dev_ctrl 0660    system      audio
