@@ -61,8 +61,6 @@ enum {
     BUTTONS_LED,
     AMBER_LED,
     GREEN_LED,
-    BLUE_LED,
-    RED_LED,
     LCD_BACKLIGHT,
     KEYBOARD_BACKLIGHT,
     NUM_LEDS,
@@ -72,22 +70,13 @@ struct led leds[NUM_LEDS] = {
     [JOGBALL_LED] = {
         .brightness = { "/sys/class/leds/jogball-backlight/brightness", 0},
         .color = { "/sys/class/leds/jogball-backlight/color", 0},
-        .period = { "/sys/class/leds/jogball-backlight/period", 0},
     },
     [BUTTONS_LED] = {
         .brightness = { "/sys/class/leds/button-backlight/brightness", 0},
     },
-    [RED_LED] = {
-        .brightness = { "/sys/class/leds/red/brightness", 0},
-        .blink = { "/sys/class/leds/red/blink", 0},
-    },
     [GREEN_LED] = {
         .brightness = { "/sys/class/leds/green/brightness", 0},
         .blink = { "/sys/class/leds/green/blink", 0},
-    },
-    [BLUE_LED] = {
-        .brightness = { "/sys/class/leds/blue/brightness", 0},
-        .blink = { "/sys/class/leds/blue/blink", 0},
     },
     [AMBER_LED] = {
         .brightness = { "/sys/class/leds/amber/brightness", 0},
@@ -155,7 +144,7 @@ void init_globals(void)
         init_prop(&leds[i].brightness);
         init_prop(&leds[i].blink);
         init_prop(&leds[i].mode);
-	init_prop(&leds[i].color);
+        init_prop(&leds[i].color);
         init_prop(&leds[i].period);
     }
     g_attention = malloc(sizeof(struct light_state_t));
@@ -284,19 +273,12 @@ set_trackball_light(struct light_state_t const* state)
     LOGV("%s color=%08x mode=%d period %d\n", __func__,
         state->color, mode, period);
 
-
     if (mode != 0) {
         get_rgb(state, &red, &green, &blue);
 
         rc = write_rgb(&leds[JOGBALL_LED].color, red, green, blue);
         if (rc != 0)
             LOGE("set color failed rc = %d\n", rc);
-        if (period) {
-            rc = write_int(&leds[JOGBALL_LED].period, period);
-            /*if (rc != 0) Pedlar: useless error message was spamming logs.
-               LOGE("set period failed rc = %d\n", rc);
-	   */
-        }
     }
     // If the value isn't changing, don't set it, because this
     // can reset the timer on the breathing mode, which looks bad.
@@ -420,7 +402,6 @@ set_speaker_light_locked(struct light_device_t* dev,
 
     err = write_int(&leds[AMBER_LED].brightness, r);
     err = write_int(&leds[GREEN_LED].brightness, g);
-    err = write_int(&leds[BLUE_LED].brightness, b);
 
     /* leds[R/G/B].brightness > 0 will result in a solid color,
      * but the blinking trigger overrides this.
@@ -439,14 +420,12 @@ set_speaker_light_locked(struct light_device_t* dev,
         
         err = write_int(&leds[AMBER_LED].blink, r ? 1 : 0);
         err = write_int(&leds[GREEN_LED].blink, g ? 1 : 0);
-        err = write_int(&leds[BLUE_LED].blink, b ? 1 : 0);
     }
     else {
         LOGV("set_led_state color R=%02x, G=%02x, B=%02X, on\n", r, g, b);
 
         err = write_int(&leds[AMBER_LED].blink, 0);
         err = write_int(&leds[GREEN_LED].blink, 0);
-        err = write_int(&leds[BLUE_LED].blink, 0);
    }
 
     return 0;
