@@ -79,4 +79,4 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/f
 
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
-BOARD_USE_LEGACY_TOUCHSCREEN := true
+
