@@ -104,6 +104,9 @@ PRODUCT_COPY_FILES += \
 # Device specific firmware
 PRODUCT_COPY_FILES += \
     device/htc/vision/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
+    hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/fw_bcm4329_abg.bin:system/vendor/firmware/fw_bcm4329.bin \
+    hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/fw_bcm4329_p2p.bin:system/vendor/firmware/fw_bcm4329_p2p.bin \
+    hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin \
     device/htc/vision/firmware/default.acdb:system/etc/firmware/default.acdb \
     device/htc/vision/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/vision/firmware/default_org_WA.acdb:system/etc/firmware/default_org_WA.acdb \
@@ -121,18 +124,6 @@ PRODUCT_COPY_FILES += \
 
 # Kernel modules
 #PRODUCT_COPY_FILES += \
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/msm7x30-common/msm7230/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
-PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/msm7230/bcm4329.ko:system/lib/modules/bcm4329.ko
 
 # stuff common to all HTC phones
 $(call inherit-product, device/htc/common/common.mk)
