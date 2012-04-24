@@ -104,9 +104,6 @@ PRODUCT_COPY_FILES += \
 # Device specific firmware
 PRODUCT_COPY_FILES += \
     device/htc/vision/firmware/bcm4329.hcd:system/vendor/firmware/bcm4329.hcd \
-    hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/fw_bcm4329_abg.bin:system/vendor/firmware/fw_bcm4329.bin \
-    hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/fw_bcm4329_p2p.bin:system/vendor/firmware/fw_bcm4329_p2p.bin \
-    hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/fw_bcm4329_apsta.bin:system/vendor/firmware/fw_bcm4329_apsta.bin \
     device/htc/vision/firmware/default.acdb:system/etc/firmware/default.acdb \
     device/htc/vision/firmware/default_org.acdb:system/etc/firmware/default_org.acdb \
     device/htc/vision/firmware/default_org_WA.acdb:system/etc/firmware/default_org_WA.acdb \
@@ -115,6 +112,9 @@ PRODUCT_COPY_FILES += \
 
 # Alternate NAM gps.conf to NAM package
 PRODUCT_COPY_FILES += device/common/gps/gps.conf_US:system/etc/nam/gps.conf
+
+# Copy bcm4329 firmware
+$(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)
 
 PRODUCT_COPY_FILES += \
     device/htc/vision/vold.fstab:system/etc/vold.fstab
