@@ -60,10 +60,6 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 1394606080
 BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
-# Define kernel config for inline building
-TARGET_KERNEL_CONFIG := flinny_msm7230_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/msm7x30
-
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/msm7x30-common/msm7230/kernel
 
@@ -79,4 +75,4 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/usb_mass_storage/lun0/f
 
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
-
+BOARD_USE_LEGACY_TOUCHSCREEN := true
