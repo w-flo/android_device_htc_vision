@@ -141,11 +141,14 @@ service bugreport /system/bin/bugmailer.sh -v
     oneshot
     keycodes 114 115
 
-service hciattach /system/bin/brcm_patchram_plus --enable_hci --enable_lpm \
-    --baudrate 3000000 --patchram /vendor/firmware/bcm4329.hcd /dev/ttyHS0
-    user bluetooth
+# Make sure we startup btld before hcid
+# Set target address to emulator host loopback IF
+# Limit baudrate to 460800 to ensure reliable uart operation
+service btld /system/bin/btld -lpm 1 -hb 3000000
+    user root
     group bluetooth net_bt_admin
     disabled
+    oneshot
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     class main
