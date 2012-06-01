@@ -40,5 +40,5 @@
 /dev/bus/usb/*          0660   root       usb
 /dev/mtp_usb            0660   root       mtp
 /dev/msm_camera/*       0666   system     camera
-/dev/tun                0640   vpn        vpn
+/dev/tun                0660   system     vpn
 /sys/devices/virtual/usb_composite/*   enable      0664  root   system
