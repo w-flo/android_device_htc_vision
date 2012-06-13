@@ -61,7 +61,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := vision_defconfig
+TARGET_KERNEL_CONFIG := vision_cm9_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
