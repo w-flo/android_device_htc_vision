@@ -119,6 +119,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/htc/vision/proprietary/libcamera.so:obj/lib/libcamera.so
 
+# BT main.conf
+PRODUCT_COPY_FILES += \
+    system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
+
 # Kernel modules
 #PRODUCT_COPY_FILES += \
 
