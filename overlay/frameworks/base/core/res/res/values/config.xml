@@ -41,25 +41,15 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-         <item>5</item>
+         <item>2</item>
+         <item>4</item>
          <item>10</item>
-         <item>15</item>
-         <item>20</item>
-         <item>30</item>
-         <item>40</item>
-         <item>50</item>
-         <item>60</item>
-         <item>80</item>
-         <item>100</item>
-         <item>130</item>
-         <item>160</item>
-         <item>200</item>
-         <item>300</item>
-         <item>400</item>
-         <item>500</item>
-         <item>650</item>
-         <item>800</item>
-         <item>1023</item>
+         <item>22</item>
+         <item>42</item>
+         <item>123</item>
+         <item>260</item>
+         <item>392</item>
+         <item>714</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -67,25 +57,15 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-         <item>95</item>
+         <item>55</item>
+         <item>65</item>
+         <item>80</item>
          <item>100</item>
-         <item>110</item>
          <item>120</item>
-         <item>125</item>
-         <item>130</item>
-         <item>135</item>
          <item>140</item>
-         <item>145</item>
-         <item>150</item>
-         <item>155</item>
          <item>160</item>
-         <item>170</item>
-         <item>180</item>
-         <item>190</item>
          <item>200</item>
-         <item>210</item>
-         <item>220</item>
-         <item>230</item>
+         <item>255</item>
          <item>255</item>
     </integer-array>
 
@@ -94,23 +74,13 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
+         <item>4</item>
+         <item>6</item>
+         <item>10</item>
+         <item>15</item>
+         <item>20</item>
          <item>30</item>
          <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>30</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
          <item>0</item>
          <item>0</item>
          <item>0</item>
@@ -127,16 +97,6 @@ Passion has no keyboard so all values are zero.
          <item>255</item>
          <item>255</item>
          <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
          <item>0</item>
          <item>0</item>
          <item>0</item>
