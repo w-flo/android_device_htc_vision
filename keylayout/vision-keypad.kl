@@ -169,7 +169,7 @@ key 143   POWER             WAKE
 # key 147 "KEY_XFER"
 # key 148 "KEY_PROG1"
 # key 149 "KEY_PROG2"
-key 150   EXPLORER
+key 150   FUNC_1
 # key 151 "KEY_MSDOS"
 key 152   POWER             WAKE
 # key 153 "KEY_DIRECTION"
