@@ -117,7 +117,7 @@ static int init_prop(struct led_prop *prop)
         return 0;
     fd = open(prop->filename, O_RDWR);
     if (fd < 0) {
-        LOGE("init_prop: %s cannot be opened (%s)\n", prop->filename,
+        ALOGE("init_prop: %s cannot be opened (%s)\n", prop->filename,
              strerror(errno));
         return -errno;
     }
@@ -163,7 +163,7 @@ write_int(struct led_prop *prop, int value)
     if (prop->fd < 0)
         return 0;
 
-    LOGV("%s %s: 0x%x\n", __func__, prop->filename, value);
+    ALOGV("%s %s: 0x%x\n", __func__, prop->filename, value);
 
     bytes = snprintf(buffer, sizeof(buffer), "%d\n", value);
     while (bytes > 0) {
@@ -189,7 +189,7 @@ write_string(struct led_prop *prop, const char* string, int len)
     if (prop->fd < 0)
         return 0;
 
-    LOGV("%s %s: %s\n", __func__, prop->filename, string);
+    ALOGV("%s %s: %s\n", __func__, prop->filename, string);
 
     bytes = len;
     while (bytes > 0) {
@@ -199,7 +199,7 @@ write_string(struct led_prop *prop, const char* string, int len)
             if (errno == EINTR)
                 continue;
 
-            LOGE("unable to write to %s: %d\n", prop->filename, errno);
+            ALOGE("unable to write to %s: %d\n", prop->filename, errno);
             return -errno;
         }
         bytes -= amt;
@@ -218,7 +218,7 @@ write_rgb(struct led_prop *prop, int red, int green, int blue)
     if (prop->fd < 0)
         return 0;
 
-    LOGV("%s %s: red:%d green:%d blue:%d\n",
+    ALOGV("%s %s: red:%d green:%d blue:%d\n",
           __func__, prop->filename, red, green, blue);
 
     bytes = snprintf(buffer, sizeof(buffer), "%d %d %d\n", red, green, blue);
@@ -270,7 +270,7 @@ set_trackball_light(struct light_state_t const* state)
         mode = state->flashOnMS;
         period = state->flashOffMS;
     }
-    LOGV("%s color=%08x mode=%d period %d\n", __func__,
+    ALOGV("%s color=%08x mode=%d period %d\n", __func__,
         state->color, mode, period);
 
     if (mode != 0) {
@@ -278,7 +278,7 @@ set_trackball_light(struct light_state_t const* state)
 
         rc = write_rgb(&leds[JOGBALL_LED].color, red, green, blue);
         if (rc != 0)
-            LOGE("set color failed rc = %d\n", rc);
+            ALOGE("set color failed rc = %d\n", rc);
     }
     // If the value isn't changing, don't set it, because this
     // can reset the timer on the breathing mode, which looks bad.
@@ -299,7 +299,7 @@ handle_trackball_light_locked(int type)
     if (g_attention->flashMode == LIGHT_FLASH_HARDWARE)
         attn_mode = g_attention->flashOnMS;
 
-    LOGV("%s type %d attention %p notify %p\n",
+    ALOGV("%s type %d attention %p notify %p\n",
         __func__, type, g_attention, g_notify);
 
     // This switch could be shortened to:
@@ -333,10 +333,10 @@ handle_trackball_light_locked(int type)
         }
     }
     if (new_state == 0) {
-        LOGE("%s: unknown type (%d)\n", __func__, type);
+        ALOGE("%s: unknown type (%d)\n", __func__, type);
         return;
     }
-    LOGV("%s new state %p\n", __func__, new_state);
+    ALOGV("%s new state %p\n", __func__, new_state);
     set_trackball_light(new_state);
     return;
 }
@@ -355,7 +355,7 @@ set_light_backlight(struct light_device_t* dev,
 {
     int err = 0;
     int brightness = rgb_to_brightness(state);
-    LOGV("%s brightness=%d color=0x%08x",
+    ALOGV("%s brightness=%d color=0x%08x",
             __func__,brightness, state->color);
     pthread_mutex_lock(&g_lock);
     g_backlight = brightness;
@@ -416,13 +416,13 @@ set_speaker_light_locked(struct light_device_t* dev,
      *   - brightness = 0: turn off the LED.
      */
     if (state->flashMode != LIGHT_FLASH_NONE) {
-        LOGV("set_led_state color R=%02x, G=%02x, B=%02X, flashing\n", r, g, b);
+        ALOGV("set_led_state color R=%02x, G=%02x, B=%02X, flashing\n", r, g, b);
         
         err = write_int(&leds[AMBER_LED].blink, r ? 1 : 0);
         err = write_int(&leds[GREEN_LED].blink, g ? 1 : 0);
     }
     else {
-        LOGV("set_led_state color R=%02x, G=%02x, B=%02X, on\n", r, g, b);
+        ALOGV("set_led_state color R=%02x, G=%02x, B=%02X, on\n", r, g, b);
 
         err = write_int(&leds[AMBER_LED].blink, 0);
         err = write_int(&leds[GREEN_LED].blink, 0);
@@ -450,7 +450,7 @@ set_light_battery(struct light_device_t* dev,
 {
     pthread_mutex_lock(&g_lock);
     g_battery = *state;
-    LOGV("%s mode=%d color=0x%08x",
+    ALOGV("%s mode=%d color=0x%08x",
             __func__,state->flashMode, state->color);
     handle_speaker_light_locked(dev, state);
     pthread_mutex_unlock(&g_lock);
@@ -464,7 +464,7 @@ set_light_notifications(struct light_device_t* dev,
     pthread_mutex_lock(&g_lock);
     g_notification = *state;
 
-    LOGV("%s mode=%d color=0x%08x On=%d Off=%d\n",
+    ALOGV("%s mode=%d color=0x%08x On=%d Off=%d\n",
             __func__,state->flashMode, state->color,
             state->flashOnMS, state->flashOffMS);
     /*
@@ -517,7 +517,7 @@ set_light_notifications(struct light_device_t* dev,
         g_notify->flashMode = LIGHT_FLASH_HARDWARE;
         g_notify->flashOnMS = 7;
         g_notify->flashOffMS = (state->flashOnMS + state->flashOffMS)/1000;
-        LOGV("%s: configure blink => on: %d, off: %d", __func__,
+        ALOGV("%s: configure blink => on: %d, off: %d", __func__,
                                                        g_notify->flashOnMS,
                                                        g_notify->flashOffMS);
     } else {
@@ -539,7 +539,7 @@ set_light_attention(struct light_device_t* dev,
 {
     unsigned int colorRGB;
 
-    LOGV("%s color=0x%08x mode=0x%08x submode=0x%08x",
+    ALOGV("%s color=0x%08x mode=0x%08x submode=0x%08x",
             __func__, state->color, state->flashMode, state->flashOnMS);
 
     pthread_mutex_lock(&g_lock);
@@ -555,7 +555,7 @@ set_light_attention(struct light_device_t* dev,
             colorRGB = set_rgb(0, 0, 0);
             break;
         default:
-            LOGE("%s colorRGB=%08X, unknown color\n",
+            ALOGE("%s colorRGB=%08X, unknown color\n",
                           __func__, state->color);
             colorRGB = set_rgb(101, 255, 96);
             break;
