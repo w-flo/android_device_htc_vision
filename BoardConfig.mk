@@ -80,3 +80,6 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
 
+# RIL
+BOARD_USE_NEW_LIBRIL_HTC := true
+COMMON_GLOBAL_CFLAGS += -DRIL_VERSION_2_SUPPORT
