@@ -413,11 +413,3 @@ key INSERT         {
 	alt: '"'       
 	shift+alt:'"'       
 }
-
-key FUNC_1 {
-	label:			'\uEF04'
-	base:			'\uEF04'
-	shift, capslock:	'\uEF04'
-	alt:			'\uEF03'
-	shift+alt:		'\uEF03'
-}
