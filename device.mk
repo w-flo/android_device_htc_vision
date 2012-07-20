@@ -55,11 +55,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vision/voicemail-conf.xml:system/etc/voicemail-conf.xml
 
-# Sensors, GPS, Lights
+# Sensors, GPS, Lights, Power
 PRODUCT_PACKAGES += \
     gps.vision \
     lights.vision \
-    sensors.vision
+    sensors.vision \
+    power.vision
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
