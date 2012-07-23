@@ -59,8 +59,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     gps.vision \
     lights.vision \
-    sensors.vision \
-    power.vision
+    sensors.vision 
 
 # Input device calibration files
 PRODUCT_COPY_FILES += \
