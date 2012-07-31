@@ -104,7 +104,7 @@ static void vision_power_set_interactive(struct power_module *module, int on)
      */
 
     sysfs_write("/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
-                on ? "1024000" : "768000");
+                on ? "1516800" : "768000");
 }
 
 static void vision_power_hint(struct power_module *module, power_hint_t hint,
