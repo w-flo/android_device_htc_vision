@@ -46,15 +46,14 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-         <item>2</item>
-         <item>4</item>
-         <item>10</item>
-         <item>22</item>
-         <item>42</item>
-         <item>123</item>
-         <item>260</item>
-         <item>392</item>
-         <item>714</item>
+        <item>3</item>
+        <item>8</item>
+        <item>19</item>
+        <item>219</item>
+        <item>498</item>
+        <item>700</item>
+        <item>900</item>
+        <item>1024</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -71,7 +70,6 @@
          <item>160</item>
          <item>200</item>
          <item>255</item>
-         <item>255</item>
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -79,16 +77,15 @@
          than the size of the config_autoBrightnessLevels array.
     -->
     <integer-array name="config_autoBrightnessButtonBacklightValues">
-         <item>4</item>
-         <item>6</item>
-         <item>10</item>
-         <item>15</item>
-         <item>20</item>
-         <item>30</item>
-         <item>30</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
+        <item>55</item>
+        <item>65</item>
+        <item>80</item>
+        <item>100</item>
+        <item>120</item>
+        <item>140</item>
+        <item>160</item>
+        <item>200</item>
+        <item>255</item>
     </integer-array>
 
 <!-- Array of output values for keyboard backlight corresponding to the LUX values
@@ -97,16 +94,15 @@ than the size of the config_autoBrightnessLevels array.
 Passion has no keyboard so all values are zero.
 -->
     <integer-array name="config_autoBrightnessKeyboardBacklightValues">
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>255</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
-         <item>0</item>
+        <item>55</item>
+        <item>65</item>
+        <item>80</item>
+        <item>100</item>
+        <item>120</item>
+        <item>140</item>
+        <item>160</item>
+        <item>200</item>
+        <item>255</item>
     </integer-array>
 
     <!-- Component name of the default wallpaper. This will be ImageWallpaper if not 
