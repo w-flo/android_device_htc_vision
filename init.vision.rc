@@ -166,3 +166,18 @@ on property:ro.build.tags=test-keys
 
 on property:ro.build.tags=release-keys
     start htc_ebdlogd_rel
+
+service compcache /system/bin/handle_compcache
+    class main
+    user root
+    group root
+    disabled
+
+on property:persist.service.zram=10
+    start compcache
+
+on property:persist.service.zram=18
+    start compcache
+
+on property:persist.service.zram=26
+    start compcache
