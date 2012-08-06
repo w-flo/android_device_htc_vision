@@ -120,9 +120,6 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 PRODUCT_COPY_FILES += \
     device/htc/vision/vold.fstab:system/etc/vold.fstab
 
-PRODUCT_COPY_FILES += \
-    vendor/htc/vision/proprietary/libcamera.so:obj/lib/libcamera.so
-
 # BT main.conf
 PRODUCT_COPY_FILES += \
     system/bluetooth/data/main.conf:system/etc/bluetooth/main.conf
