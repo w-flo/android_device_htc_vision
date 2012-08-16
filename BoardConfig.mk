@@ -78,6 +78,8 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_VOLD_EMMC_SHARES_DEV_MAJOR := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun0/file
 
+TARGET_BOOTANIMATION_USE_RGB565 := true
+
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
 
