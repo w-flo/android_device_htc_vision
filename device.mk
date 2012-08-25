@@ -27,7 +27,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     device/htc/vision/init.vision.rc:root/init.vision.rc \
-    device/htc/vision/ueventd.vision.rc:root/ueventd.vision.rc
+    device/htc/vision/ueventd.vision.rc:root/ueventd.vision.rc \
+    device/htc/vision/fstab.vision:root/fstab.vision
 
 ## (2) Also get non-open-source GSM-specific aspects if available
 $(call inherit-product-if-exists, vendor/htc/vision/device-vendor.mk)
