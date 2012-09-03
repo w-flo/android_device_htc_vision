@@ -9,7 +9,7 @@ on early-init
     # for backwards compatibility
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
-    write /proc/sys/vm/min_free_kbytes 16384
+    write /proc/sys/vm/min_free_kbytes 8192
 
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 
