@@ -144,8 +144,8 @@ key 121   NUMPAD_COMMA
 # key 122 "KEY_HANGEUL"
 # key 123 "KEY_HANJA"
 # key 124 "KEY_YEN"
-key 125   META_LEFT
-key 126   META_RIGHT
+# key 125   F14
+# key 126   F15
 key 127   MENU              WAKE_DROPPED
 key 128   MEDIA_STOP
 # key 129 "KEY_AGAIN"
@@ -203,8 +203,8 @@ key 180   NUMPAD_RIGHT_PAREN
 # key 181 "KEY_NEW"
 # key 182 "KEY_REDO"
 # key 183   F13
-# key 184   F14
-# key 185   F15
+key 184   META_LEFT
+key 185   META_RIGHT
 # key 186   F16
 # key 187   F17
 # key 188   F18

@@ -152,35 +152,35 @@ key J              {
 	base:'j'       
 	shift, capslock:'J'       
 	alt: '\u00E4'  
-	shift+alt:'\u00E4'  
+	shift+alt:'\u00C4'
 }
 key K              {
 	label:'K'       
 	base:'k'       
 	shift, capslock:'K'       
-	alt: '\u00FC'  
-	shift+alt:'\u00FC'  
+	alt: '\u00FC'
+	shift+alt:'\u00DC'
 }
 key L              {
 	label:'L'       
 	base:'l'       
 	shift, capslock:'L'       
 	alt: '\u00F6'  
-	shift+alt:'\u00F6'  
+	shift+alt:'\u00D6'
 }
 key M              {
 	label:'M'       
 	base:'m'       
 	shift, capslock:'M'       
 	alt: '\''      
-	shift+alt:'\''      
+	shift+alt:'\u003E'
 }
 key N              {
 	label:'N'       
 	base:'n'       
 	shift, capslock:'N'       
 	alt: '+'       
-	shift+alt:'+'       
+	shift+alt:'\u003C'
 }
 key O              {
 	label:'O'       
@@ -283,9 +283,9 @@ key COMMA          {
 key PERIOD         {
 	label:'.'       
 	base:'.'       
-	shift, capslock:'.'       
+	shift, capslock:'\u005E'
 	alt: ':'       
-	shift+alt:':'       
+	shift+alt:':'
 }
 key TAB            {
 	label:'\u0009'  
@@ -346,7 +346,7 @@ key RIGHT_BRACKET  {
 key BACKSLASH      {
 	label:'\\'      
 	base:'\\'      
-	shift, capslock:'|'       
+	shift, capslock:'|'
 	alt: '\\'      
 	shift+alt:'|'       
 }
@@ -367,7 +367,7 @@ key APOSTROPHE     {
 key SLASH          {
 	label:'/'       
 	base:'/'       
-	shift, capslock:'/'       
+	shift, capslock:'\u005C'
 	alt: '"'       
 	shift+alt:'"'       
 }
@@ -397,18 +397,18 @@ key SCROLL_LOCK    {
 	shift+alt:'\uEF01'  
 }
 key META_LEFT      {
-	label:'\uEF02'  
-	base:'\uEF02'  
-	shift, capslock:'\uEF02'  
-	alt: '\uEF02'  
-	shift+alt:'\uEF02'  
+	label:'\u003C'
+	base:'\u003C'
+	shift, capslock:'\uEF02'
+	alt: '\uEF02'
+	shift+alt:'\uEF02'
 }
 key META_RIGHT     {
-	label:'\uEF03'  
-	base:'\uEF03'  
-	shift, capslock:'\uEF03'  
-	alt: '\uEF04'  
-	shift+alt:'\uEF04'  
+	label:'\u003E'
+	base:'\u003E'
+	shift, capslock:'\u007E'
+	alt: '\u007E'
+	shift+alt:'\u007E'
 }
 key INSERT         {
 	label:'?'       
