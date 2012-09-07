@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BASE=../../../vendor/htc/pyramid/proprietary
+BASE=../../../vendor/htc/vision/proprietary
 rm -rf $BASE/*
 
 for FILE in `egrep -v '(^#|^$)' proprietary-files.txt`; do
