@@ -127,17 +127,13 @@ PRODUCT_COPY_FILES += \
 # Kernel modules
 #PRODUCT_COPY_FILES += \
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
 LOCAL_KERNEL := device/htc/msm7x30-common/msm7230/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
 PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/msm7230/bcmdhd.ko:system/lib/modules/bcmdhd.ko
-endif
 
 	# zram
 PRODUCT_COPY_FILES += \

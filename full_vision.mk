@@ -21,17 +21,6 @@
 # lines, full and maguro, hence its name.
 #
 
-# GSM APN list
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
-
-# GSM SPN overrides list
-PRODUCT_COPY_FILES += \
-    vendor/cm/prebuilt/common/etc/spn-conf.xml:system/etc/spn-conf.xml
- 
-#Torch
-PRODUCT_PACKAGES := \
-    Torch
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
