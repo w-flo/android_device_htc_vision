@@ -237,7 +237,7 @@ key 212   CAMERA
 key 214 BUTTON_R2
 key 215   AT
 # key 216 "KEY_CHAT"
-key 217   ASSIST
+key 217   SEARCH
 # key 218 "KEY_CONNECT"
 # key 219 "KEY_FINANCE"
 # key 220 "KEY_SPORT"
