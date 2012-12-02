@@ -26,6 +26,7 @@ PRODUCT_COPY_FILES += \
 ## (1) First, the most specific values, i.e. the aspects that are specific to GSM
 
 PRODUCT_COPY_FILES += \
+    device/htc/vision/ramdisk/init.local.rc:root/init.local.rc \
     device/htc/vision/ramdisk/init.vision.rc:root/init.vision.rc \
     device/htc/vision/ramdisk/ueventd.vision.rc:root/ueventd.vision.rc \
     device/htc/vision/ramdisk/fstab.vision:root/fstab.vision
