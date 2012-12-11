@@ -37,10 +37,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
     ro.com.google.gmsversion=2.3_r3 \
-    ro.setupwizard.enable_bypass=1 \
-    dalvik.vm.lockprof.threshold=500 \
-    dalvik.vm.dexopt-flags=m=y \
-    ro.camera.preview=true
+    ro.setupwizard.enable_bypass=1
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -148,5 +145,8 @@ $(call inherit-product, device/htc/vision/media_htcaudio.mk)
 $(call inherit-product, device/htc/vision/media_a1026.mk)
 
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
+
+# we have enough storage space to hold precise GC data (dalvik.vm.dexopt-flags=m=y)
+PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product-if-exists, vendor/htc/vision/device-vendor.mk)
