@@ -169,6 +169,11 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
     disabled
     oneshot
 
+service qrngd /system/bin/qrngd -f	268
+    class main	269
+    user root	270
+    group root
+
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     class late_start
