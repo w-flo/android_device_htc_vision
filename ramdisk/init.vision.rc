@@ -170,7 +170,7 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
 
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
-    class late_start
+    class main
     user compass
     group compass misc input
 
