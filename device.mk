@@ -37,7 +37,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.com.google.locationfeatures=1 \
     ro.com.google.networklocation=1 \
     ro.com.google.gmsversion=2.3_r3 \
-    ro.setupwizard.enable_bypass=1
+    ro.setupwizard.enable_bypass=1 \
+    ro.kernel.android.checkjni=0
 
 # Override /proc/sys/vm/dirty_ratio on UMS
 PRODUCT_PROPERTY_OVERRIDES += \
