@@ -84,4 +84,9 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
+
+# For Legacy EGL
+BOARD_EGL_NEEDS_LEGACY_FB := true
+
+# Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/vision/bluetooth
