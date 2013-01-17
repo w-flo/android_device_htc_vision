@@ -117,20 +117,6 @@ $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329
 PRODUCT_COPY_FILES += \
     device/htc/vision/configs/vold.fstab:system/etc/vold.fstab
 
-# Kernel modules
-#PRODUCT_COPY_FILES += \
-
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/htc/msm7x30-common/msm7230/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-PRODUCT_COPY_FILES += \
-    device/htc/msm7x30-common/msm7230/bcmdhd.ko:system/lib/modules/bcmdhd.ko
-endif
-
 # zram
 PRODUCT_COPY_FILES += \
     device/htc/vision/ramdisk/zram.sh:root/sbin/zram.sh
