@@ -61,7 +61,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := vision_andromadus_defconfig
+TARGET_KERNEL_CONFIG := vision_aosp_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-linaro-4.7
 
