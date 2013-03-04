@@ -80,7 +80,8 @@ PRODUCT_COPY_FILES += \
     device/htc/vision/keylayout/vision-keypad-tur.kl:system/usr/keylayout/vision-keypad-tur.kl \
     device/htc/vision/keylayout/vision-keypad-wwe-bopomo.kl:system/usr/keylayout/vision-keypad-wwe-bopomo.kl \
     device/htc/vision/keylayout/vision-keypad-wwe.kl:system/usr/keylayout/vision-keypad-wwe.kl \
-    device/htc/vision/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl 
+    device/htc/vision/keylayout/atmel-touchscreen.kl:system/usr/keylayout/atmel-touchscreen.kl \
+    device/htc/vision/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl
 
 # Keymaps
 PRODUCT_COPY_FILES += \
