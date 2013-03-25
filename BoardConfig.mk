@@ -61,7 +61,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := vision_andromadus_defconfig
+TARGET_KERNEL_CONFIG := vision_andromadus_ion_pmem_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-linaro-4.7
 
@@ -85,3 +85,5 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storag
 # Use Legacy Trackpad
 BOARD_USE_LEGACY_TRACKPAD := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/vision/bluetooth
+
+TARGET_USES_ION := true
