@@ -151,4 +151,7 @@ $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 # we have enough storage space to hold precise GC data (dalvik.vm.dexopt-flags=m=y)
 PRODUCT_TAGS += dalvik.gc.type-precise
 
+# lower the increment
+ADDITIONAL_BUILD_PROPERTIES += dalvik.vm.heapgrowthlimit=36m
+
 $(call inherit-product-if-exists, vendor/htc/vision/device-vendor.mk)
