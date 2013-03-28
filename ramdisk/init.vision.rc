@@ -1,4 +1,4 @@
-init.htc7x30.usb.rc
+import init.htc7x30.usb.rc
 
 on early-init
     mount debugfs /sys/kernel/debug /sys/kernel/debug
