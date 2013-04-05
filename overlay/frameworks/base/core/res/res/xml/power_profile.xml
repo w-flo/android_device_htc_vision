@@ -47,6 +47,9 @@
     <value>1200000</value>
     <value>1401600</value>
     <value>1516800</value>
+    <value>1612800</value>
+    <value>1708800</value>
+    <value>1804800</value>
   </array>
   <!-- Power consumption in suspend -->
   <item name="cpu.idle">3.0</item> <!-- from /sys/class/power_supply/battery/current_now -->
@@ -60,5 +63,8 @@
       <value>173.2</value>
       <value>196.2</value>
       <value>220.1</value>
+      <value>232</value>
+      <value>248</value>
+      <value>250</value>
   </array>
 </device>
