@@ -13,8 +13,6 @@ on early-init
     symlink /storage/primary/legacy /storage/sdcard0
     symlink /mnt/shell/primary/0 /storage/primary/legacy
 
-    write /proc/sys/vm/min_free_kbytes 8192
-
     setprop ro.crypto.tmpfs_options size=128m,mode=0771,uid=1000,gid=1000
 
 on early-fs
