@@ -25,9 +25,6 @@
     <!-- LED Flashlight -->
     <bool name="has_led_flash">true</bool>
 
-    <!-- Whether or not to display the trackball settings -->
-    <bool name="has_trackball">true</bool>
-
     <bool name="config_show_expandedDesktop">true</bool>
 
     <!-- Whether or not the dock settings are to be displayed for this device when docked -->
