@@ -132,9 +132,6 @@ PRODUCT_COPY_FILES += \
     device/htc/msm7x30-common/msm7230/bcmdhd.ko:system/lib/modules/bcmdhd.ko
 endif
 
-# stuff common to all HTC phones
-$(call inherit-product, device/htc/common/common.mk)
-
 # common msm7x30 configs
 $(call inherit-product, device/htc/msm7x30-common/msm7x30.mk)
 
