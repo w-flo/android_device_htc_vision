@@ -33,7 +33,7 @@ USE_CAMERA_STUB := true
 
 TARGET_BOOTLOADER_BOARD_NAME := vision
 
-BOARD_KERNEL_CMDLINE := no_console_suspend=1
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=tty1
 BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
 BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
@@ -61,7 +61,7 @@ BOARD_BOOTIMAGE_PARTITION_SIZE := 4194304
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Define kernel config for inline building
-TARGET_KERNEL_CONFIG := vision_andromadus_defconfig
+TARGET_KERNEL_CONFIG := vision_ubuntu_touch_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
 
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
