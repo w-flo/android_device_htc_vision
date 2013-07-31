@@ -149,8 +149,8 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
 # compass/accelerometer daemon
 service akmd /system/bin/akmd
     class late_start
-    user compass
-    group compass misc input
+    user system
+    group system misc input
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p13 /dev/block/mmcblk0p14
     class core

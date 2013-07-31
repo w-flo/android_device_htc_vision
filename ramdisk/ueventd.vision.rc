@@ -67,9 +67,9 @@
 /dev/pmem_adsp          0660    system      audio
 
 # for vision sensors
-/dev/akm8975_aot        0640    compass     system
-/dev/akm8975_daemon     0640    compass     system
-/dev/bma150             0640    compass     system
+/dev/akm8975_aot        0640    system     system
+/dev/akm8975_daemon     0640    system     system
+/dev/bma150             0640    system     system
 
 
 
