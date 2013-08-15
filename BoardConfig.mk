@@ -33,7 +33,7 @@ USE_CAMERA_STUB := true
 
 TARGET_BOOTLOADER_BOARD_NAME := vision
 
-BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=tty1
+BOARD_KERNEL_CMDLINE := no_console_suspend=1 console=tty1 datapart=/dev/mmcblk0p26
 BOARD_KERNEL_RECOVERY_CMDLINE := $(BOARD_KERNEL_CMDLINE) msmsdcc_power_gpio=88
 BOARD_KERNEL_BASE := 0x4000000
 BOARD_KERNEL_PAGE_SIZE := 4096
