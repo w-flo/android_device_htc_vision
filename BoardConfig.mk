@@ -67,6 +67,9 @@ TARGET_KERNEL_SOURCE := kernel/htc/msm7x30-3.0
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/common
 TARGET_PREBUILT_KERNEL := device/htc/msm7x30-common/msm7230/kernel
 
+# Custom bootimg creation
+BOARD_CUSTOM_BOOTIMG_MK := device/htc/vision/shbootimg.mk
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 800
 TARGET_SCREEN_WIDTH := 480
