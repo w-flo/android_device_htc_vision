@@ -1,0 +1,4 @@
+on boot
+    # Somehow adb is disabled in recovery after boot. Wait a few secs, then enable it.
+    wait /this/path/intentionally/left/nonexistent 3
+    write /sys/class/android_usb/android0/enable 1
