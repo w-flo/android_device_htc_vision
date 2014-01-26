@@ -48,6 +48,10 @@ $(INSTALLED_BOOTIMAGE_TARGET_ANDROID): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES_A
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES)
 # boot partition for vision is too small, so get rid of adbd and its crypto dependency
 	cd $(TARGET_UBUNTU_ROOT_OUT) && rm lib/arm-linux-gnueabihf/libcrypto.so.1.0.0 && rm sbin/adbd
+# search for android partitions in /dev in addition to the default /dev/disk/by-* dirs
+# the by-* dirs have strange contents on the vision, while /dev/mmcblk0p* exist
+	cd $(TARGET_UBUNTU_ROOT_OUT) && sed -i 's%for dir in by-partlabel by-name by-label; do%for dir in by-partlabel by-name by-label ..; do%' scripts/touch
+# repack initrd
 	cd $(TARGET_UBUNTU_ROOT_OUT) && find . | cpio -o -H newc | gzip > $(INSTALLED_RAMDISK_TARGET)
 	$(call pretty,"Target boot image for Ubuntu Touch with adbd removed from initrd: $@")
 	$(hide) $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --output $@
