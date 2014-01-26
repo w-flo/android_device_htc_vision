@@ -27,6 +27,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/htc/vision/ramdisk/init.vision.rc:root/init.vision.rc \
     device/htc/vision/init.recovery.vision.rc:root/init.recovery.vision.rc \
+    device/htc/vision/ubuntu-sd-partitioner.sh:root/ubuntu-sd-partitioner.sh \
     device/htc/vision/ramdisk/ueventd.vision.rc:root/ueventd.vision.rc \
     device/htc/vision/ramdisk/fstab.vision:root/fstab.vision
 

@@ -1,4 +1,14 @@
+on init
+    # Actual /data and /cache are too small, so create partitions on SD card instead
+    chmod 700 /ubuntu-sd-partitioner.sh
+    start sdpartitioner
+    wait /tmp/ubuntu-partitions-created 1800
+
 on boot
     # Somehow adb is disabled in recovery after boot. Wait a few secs, then enable it.
     wait /this/path/intentionally/left/nonexistent 3
     write /sys/class/android_usb/android0/enable 1
+
+service sdpartitioner /sbin/sh /ubuntu-sd-partitioner.sh
+    oneshot
+    disabled
